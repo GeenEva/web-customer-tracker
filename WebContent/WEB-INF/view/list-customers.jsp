@@ -4,11 +4,16 @@
 
 <html>
 
-<head>
+	<head>
 
-<title>List Customers</title>
+		<title>List Customers</title>
 
-</head>
+		<!-- Reference stylesheet -->
+		<link type="text/css"
+				rel="stylesheet"
+				href="${pageContext.request.contextPath}/resources/css/style.css"/>
+		
+	</head>
 
 <body>
 	List Customers
