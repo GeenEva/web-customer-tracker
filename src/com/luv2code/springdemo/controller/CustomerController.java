@@ -64,4 +64,12 @@ public class CustomerController {
 		return "customer-update";
 	}
 	
+	@PostMapping("/updateCustomer")
+	public String updateCustomer(Model theModel, Customer customer) {
+		
+		System.out.println(customer.getEmail());
+		customerService.updateCustomer(customer);
+		
+		return "redirect:/customer/list";
+	}
 }
