@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.luv2code.springdemo.entity.Customer;
@@ -17,23 +18,25 @@ public class CustomerController {
 
 	@Autowired
 	private CustomerService customerService;
-	
-	
+
 	@GetMapping("/list")
 	public String listCustomers(Model theModel) {
-		
-		
+
 		List<Customer> theCustomers = customerService.getCustomers();
-		
-		
-		for(Customer customer : theCustomers){
+
+		for (Customer customer : theCustomers) {
 			System.out.println(customer.toString());
 		}
-		
+
 		theModel.addAttribute("customers", theCustomers);
-		
-		
-		
+
 		return "list-customers";
 	}
+	
+	@GetMapping("/showFormForAdd")
+	public String showFormForAdd(Model theModel) {
+		
+		return "customer-form";
+	}
+	
 }
