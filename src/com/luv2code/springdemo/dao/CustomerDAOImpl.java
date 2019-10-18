@@ -18,13 +18,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	
-	@Transactional
-	@Override
-	public Customer getCustomer() {
-
-		return null;
-	}
 
 	
 	@Override
@@ -39,6 +32,15 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		
 		return customers;
+	}
+
+	@Override
+	public void saveCustomer(Customer customer) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		currentSession.save(customer);
+
 	}
 	
 

@@ -49,7 +49,11 @@
 			</table>
 
 		</form:form>
-	</div>
-
+		
+		<div style="clear; both;"></div>
+		
+		<p>
+			<a href="${pageContext.request.contextPath}/customer/list">Back to list</a>
+		</p>
 </body>
 </html>
