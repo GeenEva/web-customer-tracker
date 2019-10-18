@@ -27,8 +27,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 
 	
-	
-	@Transactional
 	@Override
 	public List<Customer> getCustomers() {
 		
