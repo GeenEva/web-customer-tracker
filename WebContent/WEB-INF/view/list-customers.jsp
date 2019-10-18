@@ -29,7 +29,6 @@
 	<div id="container">
 		<div id="content">
 			<!-- Add the add-customer button -->
-			
 			<input type="button" value="Add Customer"
 				onclick="window.location.href='showFormForAdd'; return false;"
 				/>
@@ -43,7 +42,6 @@
 					<th>Action</th>
 				</tr>
 				
-				
 				<!--  Loop over and print our customers -->
 				<c:forEach var="tempCustomer" items="${customers}">
 				
@@ -56,7 +54,6 @@
 						<td>${tempCustomer.firstName}</td>
 						<td>${tempCustomer.lastName}</td>
 						<td>${tempCustomer.email}</td>
-						
 						<td>
 							<!-- Display the update-link -->
 							<a href="${updateLink}">Update</a>
