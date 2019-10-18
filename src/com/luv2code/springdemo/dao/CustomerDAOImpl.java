@@ -26,7 +26,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
 														// In HQL query, don't write the table name but write your Entity class name in your query!
-		Query<Customer> theQuery = currentSession.createQuery("FROM Customer", Customer.class);
+		Query<Customer> theQuery = currentSession.createQuery("FROM Customer order by lastName", Customer.class);
 		
 		List<Customer> customers = theQuery.getResultList();
 		
