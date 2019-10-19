@@ -59,14 +59,8 @@ public class CustomerController {
 		
 		theModel.addAttribute("customer", customer);
 		
-		return "customer-update";
+		return "customer-form";
 	}
 	
-	@PostMapping("/updateCustomer")
-	public String updateCustomer(Customer customer) {
-		
-		customerService.updateCustomer(customer);
-		
-		return "redirect:/customer/list";
-	}
+	
 }

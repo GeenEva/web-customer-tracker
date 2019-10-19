@@ -12,5 +12,4 @@ public interface CustomerService {
 
 	public Customer getCustomer(int customerId);
 
-	public void updateCustomer(Customer customer);
 }
