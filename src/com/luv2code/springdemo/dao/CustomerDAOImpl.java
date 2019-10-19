@@ -2,14 +2,12 @@ package com.luv2code.springdemo.dao;
 
 import java.util.List;
 
-
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import com.luv2code.springdemo.entity.Customer;
 
@@ -56,9 +54,10 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	public void updateCustomer(Customer customer) {
 		
+		System.out.println(customer.getFirstName());
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		currentSession.saveOrUpdate(customer);
+		currentSession.update(customer);;
 		
 	}
 	

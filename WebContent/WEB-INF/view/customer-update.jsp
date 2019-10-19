@@ -5,7 +5,7 @@
 
 <head>
 
-<title>Save Customer Form</title>
+<title>Update Customer Form</title>
 <link type="text/css" rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/style.css">
 
@@ -26,7 +26,7 @@
 
 		<form:form action="updateCustomer" modelAttribute="customer"
 			method="POST">
-
+			<form:hidden path="id"/>
 			<table>
 				<tbody>
 					<tr>

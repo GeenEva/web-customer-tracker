@@ -59,15 +59,12 @@ public class CustomerController {
 		
 		theModel.addAttribute("customer", customer);
 		
-		System.out.println(customer);
-		
 		return "customer-update";
 	}
 	
 	@PostMapping("/updateCustomer")
-	public String updateCustomer(Model theModel, Customer customer) {
+	public String updateCustomer(Customer customer) {
 		
-		System.out.println(customer.getEmail());
 		customerService.updateCustomer(customer);
 		
 		return "redirect:/customer/list";
