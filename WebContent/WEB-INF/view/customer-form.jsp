@@ -49,7 +49,7 @@
 			</table>
 
 		</form:form>
-		
+		</div>
 		<div style="clear; both;"></div>
 		
 		<p>
